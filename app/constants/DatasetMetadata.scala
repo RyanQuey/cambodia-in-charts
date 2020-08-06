@@ -27,6 +27,9 @@ object DatasetMetadata {
 	)
   var environmentDatasets : Set[Map[String, String]] = Set(
     Map(
+      "slug" -> "forest-area-percent",
+    ),
+    Map(
       "slug" -> "above-ground-biomass-in-forest-per-hectare",
     ),
 	)
