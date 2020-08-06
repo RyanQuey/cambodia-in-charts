@@ -2,7 +2,8 @@ lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
   .settings(
     name := """cambodia-in-charts""",
-    organization := "com.example",
+    maintainer := "quey.ryan@gmail.org",
+    organization := "com.ryanquey",
     version := "1.0-SNAPSHOT",
     scalaVersion := "2.13.1",
     libraryDependencies ++= Seq(

@@ -14,7 +14,7 @@ WORKDIR /app
 RUN sbt dist
 
 # now unzip it
-unzip /app/target/universal/cambodia-in-charts-1.0-SNAPSHOT.zip
+RUN unzip /app/target/universal/cambodia-in-charts-1.0-SNAPSHOT.zip
 
 # finally, can run it
 ENTRYPOINT /app/entrypoint.sh
