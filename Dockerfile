@@ -10,6 +10,11 @@ WORKDIR /app
 
 # build a prod deployable tarball
 # https://www.playframework.com/documentation/2.8.x/Deploying#Using-the-dist-task
-RUN sbt universal:packageZipTarball
-ENTRYPOINT entrypoint.sh
+# RUN sbt universal:packageZipTarball
+RUN sbt dist
 
+# now unzip it
+unzip /app/target/universal/cambodia-in-charts-1.0-SNAPSHOT.zip
+
+# finally, can run it
+ENTRYPOINT /app/entrypoint.sh

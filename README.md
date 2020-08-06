@@ -1,4 +1,4 @@
-# Play Hello World Web Tutorial for Scala
+# Cambodia in Charts
 
 To follow the steps in this tutorial, you will need the correct version of Java and sbt. The template requires:
 
@@ -34,4 +34,16 @@ To build and run the project:
 
 3. After the message `Server started, ...` displays, enter the following URL in a browser: <http://localhost:9000>
 
-The Play application responds: `Welcome to the Hello World Tutorial!`
+## Deploying in Heroku
+```
+git push
+```
+
+## Debugging Docker/the deploy process
+```
+# copy the build that heroku will do
+./scripts/build-prod.sh
+
+# go in and look around
+docker run -it --entrypoint /bin/bash cambodia-in-charts
+```
