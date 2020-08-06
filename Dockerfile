@@ -9,7 +9,7 @@ COPY $PWD /app
 WORKDIR /app 
 
 # build a prod deployable tarball
-# https://www.playframework.com/documentation/2.8.x/Deploying
+# https://www.playframework.com/documentation/2.8.x/Deploying#Using-the-dist-task
 RUN sbt universal:packageZipTarball
 ENTRYPOINT entrypoint.sh
 

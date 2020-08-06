@@ -1,7 +1,7 @@
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
   .settings(
-    name := """play-scala-hello-world-tutorial""",
+    name := """cambodia-in-charts""",
     organization := "com.example",
     version := "1.0-SNAPSHOT",
     scalaVersion := "2.13.1",
