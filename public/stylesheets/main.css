@@ -127,5 +127,13 @@
  aside a[href^="http"]:after,.doc a[href^="http"]:after{content:url(/assets/images/external.png);vertical-align:middle;margin-left:5px;}
  img.resize{width:44.8px;height74.18px;float:left;}
  
+ /* if have a map together with the chart within one iframe-set-container */
+ .iframes-container {display: block;}
  .iframe-set-container {display: flex;}
  .iframe-wrapper {width: 50%;}
+
+	/* if one chart per iframe-set-container */
+ .iframes-container.one-per-set {display: flex; flex-wrap: wrap;}
+ .iframes-container.one-per-set .iframe-set-container {display: flex; width: 50%;}
+ .iframes-container.one-per-set .iframe-wrapper {width: 100%; min-width: 300px;}
+

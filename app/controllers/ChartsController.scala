@@ -3,7 +3,7 @@ package controllers
 import javax.inject._
 import play.api._
 import play.api.mvc._
-import constants.DatasetMetadata.datasets
+import constants.DatasetMetadata._
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the
@@ -20,6 +20,6 @@ class ChartsController @Inject()(cc: ControllerComponents) extends AbstractContr
    * a path of `/`.
    */
   def iframes() = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.iframes(datasets))
+    Ok(views.html.iframes(environmentDatasets, sdgDatasets, urbanizationDatasets))
   }
 }

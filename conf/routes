@@ -8,7 +8,7 @@ GET     /                                   controllers.HomeController.index
 GET     /explore                            controllers.HomeController.explore
 GET     /tutorial                           controllers.HomeController.tutorial
 GET     /test                               controllers.HomeController.test
-GET     /iframes                            controllers.ChartsController.iframes
+GET     /our-world-in-data-cambodia                           controllers.ChartsController.iframes
 
 
 # Map static resources from the /public folder to the /assets URL path
