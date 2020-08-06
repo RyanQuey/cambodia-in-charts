@@ -28,22 +28,22 @@ This example Play project was created from a seed template. It includes all Play
 
 To build and run the project:
 
-1. Use a command window to change into the example project directory, for example: `cd play-scala-hello-world-web`
-
-2. Build the project. Enter: `sbt run`. The project builds and starts the embedded HTTP server. Since this downloads libraries and dependencies, the amount of time required depends partly on your connection's speed.
-
-3. After the message `Server started, ...` displays, enter the following URL in a browser: <http://localhost:9000>
+- Run `scripts/run-dev-server.sh`
+- After the message `Server started, ...` displays, enter the following URL in a browser: <http://localhost:9000>
 
 ## Deploying in Heroku
 ```
+./scripts/deploy-to-prod.sh
+
+# we have ci/cd enabled, so will work. This will build a docker image using heroku.yml, then run it
 git push
 ```
 
 ## Debugging Docker/the deploy process
 ```
-# copy the build that heroku will do
-./scripts/build-prod.sh
-
 # go in and look around
 docker run -it --entrypoint /bin/bash cambodia-in-charts
+
+# play console - https://www.playframework.com/documentation/2.8.x/PlayConsole
+sbt # or try sbt console
 ```
